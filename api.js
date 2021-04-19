@@ -36,7 +36,7 @@ export async function fetchCommentsOfPost(id) {
 wait(2000);
 
 //fetchReactionsOfComment
-let reactions = []
+let reactions = [];
 
 export async function fetchReactionsOfComment(id) {
     const response =  await fetch(postData);
