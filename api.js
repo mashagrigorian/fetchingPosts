@@ -1,6 +1,7 @@
 const postData = './postData.json';
 
 //fetchPosts
+
 export async function fetchPosts() {
     const response =  await fetch(postData);
     const datas = await response.json()
@@ -16,7 +17,6 @@ export async function fetchPosts() {
 wait(1000);
 
 //fetchCommentsOfPost
-let comments = [];
 
 export async function fetchCommentsOfPost(id) {
     const response =  await fetch(postData);
@@ -36,7 +36,6 @@ export async function fetchCommentsOfPost(id) {
 wait(2000);
 
 //fetchReactionsOfComment
-let reactions = [];
 
 export async function fetchReactionsOfComment(id) {
     const response =  await fetch(postData);
@@ -59,4 +58,3 @@ async function wait(miliseconds) {
         resolve => setTimeout(() => resolve, miliseconds)
     )
 }
-
