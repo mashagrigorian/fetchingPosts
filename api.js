@@ -12,9 +12,6 @@ export async function fetchPosts() {
         ), 1000);
     })
 }
-// fetchPosts().then((response) => {
-//     console.log(response);
-// })
 
 wait(1000);
 
@@ -30,15 +27,12 @@ export async function fetchCommentsOfPost(id) {
                 return value.comments.reduce((aggr, val) => {
                     return {author: aggr.author = val.author, content: aggr.content = val.content}
                 })
-                // return {comments: value.comments}
             })
         ), 2000)
     })
 }
 
-// fetchCommentsOfPost(comments).then((response) => {
-//     console.log(response)
-// })
+
 wait(2000);
 
 //fetchReactionsOfComment
@@ -53,18 +47,12 @@ export async function fetchReactionsOfComment(id) {
                 return value.comments.reduce((aggr, val) => {
                     return {reactions: aggr.reactions}
                 })
-                // return {comments: value.comments}
             })
         ), 3000)
     })
 }
 
-// fetchReactionsOfComment(reactions).then((response) => {
-//     console.log(response);
-// })
 wait(3000);
-
-
 
 async function wait(miliseconds) {
     return new Promise(
